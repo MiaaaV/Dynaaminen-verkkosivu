@@ -3,10 +3,10 @@ import { useState } from 'react'
 
 function Alcometer() {
 
-  const [weight, setWeight] = useState(89)
-  const [bottles, setBottles] = useState(3)
-  const [time, setTime] = useState(1)
-  const [gender, setGender] = useState()
+  const [weight, setWeight] = useState(0)
+  const [bottles, setBottles] = useState(0)
+  const [time, setTime] = useState(0)
+  const [gender, setGender] = useState(0)
   
   const [result, setResult] = useState(0)
   
@@ -18,9 +18,9 @@ function Alcometer() {
     let burn = weight / 10;
     let newGrams = grams - (burn * time);
 
-    if (gender === "male") {
+    if (gender === "male"){
       let newResult = newGrams / (weight * 0.7)
-      if (result < 0) {
+      if (newResult < 0) {
         setResult(0)
       }
       else {
@@ -60,8 +60,6 @@ function Alcometer() {
           <option>1</option>
           <option>2</option>
           <option>3</option>
-          <option>4</option>
-          <option>5</option>
         </select>
       </div>
 
@@ -73,14 +71,12 @@ function Alcometer() {
           <option>1</option>
           <option>2</option>
           <option>3</option>
-          <option>4</option>
-          <option>5</option>
         </select>
       </div>
 
       <div>
         <label>Gender</label>
-        <input type="radio" name="gender" value="male" defaultChecked onChange={e => setGender(e.target.value)}></input><label>Male</label>
+        <input type="radio" name="gender" value="male" onChange={e => setGender(e.target.value)}></input><label>Male</label>
         <input type="radio" name="gender" value="female" onChange={e => setGender(e.target.value)}></input><label>Female</label>
       </div>
 
