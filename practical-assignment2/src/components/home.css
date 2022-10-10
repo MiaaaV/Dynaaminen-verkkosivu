@@ -1,0 +1,60 @@
+.btn {
+  background-color: rgb(45, 45, 45);
+  border: solid rgb(26, 26, 26) 5px;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: rgb(75, 75, 75);
+  border: solid rgb(95, 95, 95) 5px;
+}
+
+.btn2 {
+  background-color: white;
+  border: solid gray 5px;
+  border-radius: 10px;
+}
+
+.btn2:hover {
+  background-color: rgb(128, 128, 128);
+  border: solid rgb(102, 102, 102) 5px;
+  color: rgb(33, 33, 33);
+}
+
+
+.btn-link,
+.btn-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+input {
+  margin-left: 50px;
+}
+
+.bg-salmon {
+ background-color: black;
+}
+
+img {
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 20px;
+
+}
+
+.cus-container {
+  margin-top: 3rem;
+}
+
+.cus-grid {
+  margin-top: 5rem;
+display: grid;
+flex-direction: column;
+gap: 5rem;
+grid-template-columns: 1fr 1fr;
+}
+
+.active {
+  display: none;
+}
